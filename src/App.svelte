@@ -1,13 +1,18 @@
 <script lang="ts">
     import { supabase } from './lib/supabaseClient'
 
-    supabase.auth.signInWithOAuth({
-        provider: 'google',
-    })
 
+
+    const onClick = () => {
+
+        supabase.auth.signInWithOAuth({
+            provider: 'google',
+        })
+    }
 </script>
 
 <main>
+    <button onclick={onClick}>sign in</button>
     <form class="border p-4 w-[400px] bg-blue-100 flex flex-col space-y-2">
         <input type="text" name="title">
         <input type="date">
