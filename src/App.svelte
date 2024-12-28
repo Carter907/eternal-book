@@ -1,10 +1,10 @@
 <script lang="ts">
     import { supabase } from './lib/supabaseClient'
 
-
     supabase.auth.signInWithOAuth({
-        provider: 'google'
+        provider: 'google',
     })
+
 </script>
 
 <main>
